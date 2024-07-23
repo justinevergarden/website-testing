@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&family=Exo+2:wght@300&family=Inter:wght@500&family=Nunito&family=Permanent+Marker&family=Poppins:wght@500&family=Shadows+Into+Light&display=swap');
+@import "keep-react/css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Exo 2', cursive;
+    background-color: #010101;
+}
+
+.pagination {
+    margin-left: 400px;
+    margin-right: 400px;
+    margin-bottom: 25px;
+}
+.parallax-bg {
+    height: 100vh;
+    overflow: auto;
+}
+.page-item .page-link {
+    position: relative;
+    display: block;
+    margin: 0 2px;
+    min-height: 40px;
+    min-width: 40px;
+    text-align: center;
+    text-decoration: none;
+    color: #40B5CB;
+    border-color: #40B5CB;
+    border-width: 2px;
+    background-color: #212121;
+}
+
+.page-item a.page-link:hover {
+    color: black;
+    background-color: #BCDA3F;
+}
+
+.page-item.active .page-link {
+    color: black;
+    background-color: #40B5CB;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-item.disabled .page-link {
+    color: #40B5CB; 
+    background-color: #212121;
+    border-color: #40B5CB;
+/* display: none; */
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-right: 70px solid #40B5CB;
+    border-top: 70px solid transparent;
+
+}
+
+.text-in-triangle {
+    position: absolute;
+    top: -35px;
+    right: -65px;
+}
+
+@media (max-width:430px){
+    .page-item.disabled .page-link {
+        display: none;
+    }
+}
